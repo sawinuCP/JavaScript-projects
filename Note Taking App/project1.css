@@ -141,6 +141,10 @@ header .search input{
     border-collapse: collapse ;
 }
 
+.container .table .note-body{
+    display: none;
+}
+
 .container .table table, .container .table table td {
     border: 2px white solid;
     padding: 5px;
@@ -203,25 +207,6 @@ header .search input{
         margin-right: 0;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
