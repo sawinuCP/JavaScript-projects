@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Note Taking App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="project1.css">
+    </head>
+    <body>
+        <!-- header-------------- -->
+        <header>
+            <div class="logo">
+                <h2>Note App</h2>
+            </div>
+            <div class="search">
+                <input type="text" id="srch" placeholder="Search a note">
+            </div>
+        </header>
+
+        <!-- container------------------ -->
+        <div id="con-body" class="container">
+            <!-- input form------------ -->
+            <div class="inp-frm">
+                <form action="" id="add-frm">
+                    <h3>Add a Note</h3>
+                    <input type="text" id="n-title" placeholder="title....">
+                    <textarea id="n-body" placeholder="Note body...."></textarea>
+                    <button id="save" type="submit">save</button>
+                    <button id="reset" type="submit">Reset</button>  
+                </form>
+            </div>
+             <!-- table---------------->
+             <div class="table" id="tbl-div">
+                <table id="items">
+                    <tr>
+                        <th>title</th>
+                        <th>View</th>
+                        <th>Delete</th>
+                    </tr>
+                    <!-- <tr>
+                        <td>Note 01</td>
+                        <td class="btcellv">
+                            <button>View</button>
+                        </td>
+                        <td class="btcelld">
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Note 02</td>
+                        <td class="btcellv">
+                            <button>View</button>
+                        </td>
+                        <td class="btcelld">
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Note 03</td>
+                        <td class="btcellv">
+                            <button>View</button>
+                        </td>
+                        <td class="btcelld">
+                            <button>Delete</button>
+                        </td>
+                    </tr> -->
+                </table>
+             </div>
+        </div>
+        <!-- external script--------------- -->
+        <script src="project1.js"></script>
+        <!-- <script src="proj.js"></script> -->
+    </body>
+</html>
