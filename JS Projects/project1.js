@@ -3,22 +3,66 @@ var form = document.getElementById("add-frm");
 var items = document.getElementById("items");
 var ntitle = document.getElementById("n-title");
 var nbody = document.getElementById("n-body");
+var tableDiv = document.getElementById("tbl-div");
+var search = document.getElementById("srch");
+var resetBtn = document.getElementById("reset")
 
 var noteCount = 0;
 var newNote = '';
+var isUpdate = false;
+var record = "";
+var note = "";
+var body = "";
+
+
+
 // events-----------------
 
+// for page load-----------
+window.onload = updateTable;
+
+// for form submit------------
 form.addEventListener('submit' , addNote);
 
+// for search----------------------
+search.addEventListener('keyup' , searchNotes)
 
-// Function--------------------------------/
+// for remove--------
+items.addEventListener("click" , removeNote)
 
+// for view and update---------------
+items.addEventListener("click" , viewNUpdateNote);
+
+// for reset----------------
+resetBtn.addEventListener("click" , resetAll);
+
+
+
+// Functions--------------------------------/
 
 // update table-------------
 function updateTable(){
-    // Display the table when the note added---
+    // Display the table when the note get added---
+    if(noteCount > 0){
+        tableDiv.style.display = "";        /*  this will be set as default*/
+        
+        // update note------------
+        if(isUpdate){
+            note.firstChild.textContent = ntitle.value;
+            note.lastChild.textContent - nbody.value;
 
-    
+            // reset update and note count-----------
+            isUpdate = false;
+            noteCount--;
+        }
+        else{
+            // add new note------------------
+            items.appendChild(newNote);
+        }
+    }
+    else{
+        tableDiv.style.display = "none";
+    } 
 }
 
 
@@ -80,51 +124,77 @@ function addNote(e){
 
         // add or update the note of the table
         updateTable();
+    }
 
+    // reset all----------------
+    resetAll();
+}
+
+
+// search notes----------------/
+function searchNotes(e){
+    // text to lowercase
+    var searchTxt = e.target.value.toLowerCase();
+    // console.log(searchTxt);
+
+    // get list------------
+    var list = items.getElementsByClassName("item");
+
+    // convert to an array------------
+    var listArr =  Array.from(list);
+    // console.log(listArr);
+    listArr.forEach(function(item){
+        // get title-------
+        var noteTitle = item.firstChild.textContent;
+
+        // match-------
+        if(noteTitle.toLowerCase().indexOf(searchTxt) != -1){
+            item.style.display = "";
+        }
+        else{
+            item.style.display = "none";
+        }
+    });
+}
+
+
+// remove note-------
+function removeNote(e){
+    // console.log(e.target.id);
+    if(e.target.id === "del"){
+        if(confirm("Are you sure")){
+            // delete notes------------
+            var tr = e.target.parentElement.parentElement;
+            items.removeChild(tr);
+
+            // update table--------
+            noteCount--;
+            if(noteCount === 0){
+                updateTable();
+            }
+        }
     }
 }
 
 
+// vies and update notes------------4
+function viewNUpdateNote(e){
+    if(e.target.id === "vw"){
+        // get the element value and the update fields------------------
+        record = e.target.parentElement.parentElement;
+        note = record.firstChild;
+        ntitle.value = note.firstChild.textContent;
+        nbody.value = note.lastChild.textContent;
+        isUpdate = true;
 
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// reset all------------------
+function resetAll(){
+    ntitle.value = "";
+    nbody.value = "";
+    isUpdate = false;
+    newNote = "";
+}
 
