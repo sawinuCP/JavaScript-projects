@@ -31,6 +31,10 @@
     
 }
 
+#type-scr{
+    font-size: 83px;
+}
+
 #screen > #num > p{
     font-size: 80px;
 }
@@ -58,7 +62,43 @@
     margin: 10px;
 }
 
-#btn{
+#keys >#row1 >  button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#keys >#row2 >  button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#keys >#row3 >  button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#keys >#row4 >  button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#keys >#row5 >  button{
     width: 85px;
     height: 85px;
     border-radius: 50px;
