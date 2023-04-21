@@ -40,3 +40,12 @@ img{
     -o-border-radius: 10px;
     overflow-x:hidden;
 }
+
+i{
+    font-size: 48px;
+    padding: 5px;
+    margin: 10px;
+    color: black;
+    cursor: pointer;
+  
+}
