@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#main{
+    margin-top: 30px;
+    /* align-self: center; */
+    width: 450px;
+    height: 610px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 20px; 
+}
+
+#screen{
+    margin:10px auto;
+    width: 420px;
+    height: 90px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#type-scr{
+    font-size: 83px;
+}
+
+#screen > #num > p{
+    font-size: 80px;
+}
+
+#num{
+    height: 90px;
+    width: 52px;
+    justify-content: space-between;
+    /* background-color: bisque; */
+    border-radius: 20px;
+}
+
+#keys{
+    width: 420px;
+    margin:10px auto;
+    height: 380px;
+}
+
+#keys > div{
+    width: 380px;
+    height:85px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+#keys >#row1 >  button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#keys >#row2 >  button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#keys >#row3 >  button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#keys >#row4 >  button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#keys >#row5 >  button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+p{
+    font-size: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
