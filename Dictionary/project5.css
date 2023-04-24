@@ -42,3 +42,7 @@ body{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+
+.meaning-container{
+    display: none;
+}
