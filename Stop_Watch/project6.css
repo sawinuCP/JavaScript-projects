@@ -23,6 +23,7 @@ body{
     display: flex;
     justify-content: center;
 }
+
 button{
     background-color: #f92672;
     color: #f0f0f0;
