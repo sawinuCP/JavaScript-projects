@@ -4,6 +4,7 @@ const minuteEl = document.getElementById("minute");
 const secondEl = document.getElementById("second");
 
 const newYearTime = new Date("Jan 1, 2024 00:00:00").getTime();
+// console.log(newYearTime)
 
 updateCountdown();
 
